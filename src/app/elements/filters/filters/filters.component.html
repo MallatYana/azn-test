@@ -1,0 +1,20 @@
+<form [formGroup]="userForm" class="input-group">
+  <input type="text"
+         class="form-control"
+         aria-label="search field"
+         formControlName="query">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">Limit</button>
+    <div class="dropdown-menu">
+      <button *ngFor="let limit of limits"
+              class="dropdown-item"
+              type="button"
+              (click)="setLimit(limit)">{{limit}}</button>
+    </div>
+  </div>
+</form>
+

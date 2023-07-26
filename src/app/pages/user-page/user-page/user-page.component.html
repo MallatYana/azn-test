@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-center align-items-center flex-column mt-5">
+  <app-filters
+    [filters]="filters"
+    (searchEvent)="useFilters($event)"></app-filters>
+
+
+  <ul class="list-group w-75 mt-5">
+    <li *ngFor="let user of users$ | async"
+      class="list-group-item container">
+      <div *ngIf="filters.query === ''" class="row">
+        <span class="col-sm" [innerHTML]="user.firstName"></span>
+        <span class="col-sm"  [innerHTML]="user.lastName"></span>
+        <span class="col-sm"  [innerHTML]="user.email | emailPipe"></span>
+      </div>
+      <div *ngIf="filters.query !== ''" class="row">
+        <span class="col-sm" [innerHTML]="user.firstName | highligth: filters.query"></span>
+        <span class="col-sm"  [innerHTML]="user.lastName | highligth: filters.query"></span>
+        <span class="col-sm"  [innerHTML]="user.email | highligth: filters.query | emailPipe"></span>
+      </div>
+    </li>
+  </ul>
+</div>
