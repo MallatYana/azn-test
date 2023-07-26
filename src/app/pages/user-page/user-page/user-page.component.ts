@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import { UserApiClientService } from "../../../shared/user-api-client.service";
+import { UserApiClientService } from "../../../core/services/user-api-client.service";
 import { Observable, Subscription } from "rxjs";
-import { User } from "../../../shared/user-type";
-import { Filters } from "../../../shared/filters-type";
+import { User } from "../../../core/models/user-type";
+import { Filters } from "../../../core/models/filters-type";
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({

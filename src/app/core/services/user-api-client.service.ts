@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { User } from "./user-type";
+import { User } from "../models/user-type";
 import { map, Observable } from "rxjs";
-import { Filters } from "./filters-type";
+import { Filters } from "../models/filters-type";
 
 type GetDataResponse = {
   users: {

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
-import { EmailPipe } from "./email-pipe.pipe";
-import { HighligthPipe } from './highligth.pipe';
+import { EmailPipe } from "./pipes/email-pipe.pipe";
+import { HighligthPipe } from "./pipes/highligth.pipe";
 
 @NgModule({
   declarations: [
